@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/firstPageFragment">
+
+    <fragment
+        android:id="@+id/firstPageFragment"
+        android:name="com.example.yhw.demo.cxxxxy.views.FirstPageFragment"
+        android:label="FirstPageFragment"
+        tools:layout="@layout/fragment_first_page" >
+        <action
+            android:id="@+id/action_firstPageFragment_to_APODListFragment"
+            app:destination="@id/APODListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/APODListFragment"
+        android:name="com.example.yhw.demo.cxxxxy.views.APODListFragment"
+        android:label="APODListFragment"
+        tools:layout="@layout/fragment_apod_list" >
+        <action
+            android:id="@+id/action_APODListFragment_to_APODFragment"
+            app:destination="@id/APODFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/APODFragment"
+        android:name="com.example.yhw.demo.cxxxxy.views.APODFragment"
+        android:label="APODFragment"
+        tools:layout="@layout/fragment_apod" />
+
+</navigation>
